@@ -3,7 +3,7 @@ home: true
 heroImage: logo.png
 heroText: MyBatis Mapper
 tagline: 全新一代 MyBatis Mapper，简单易用，无需配置
-footer: Apache-2.0 Licensed | Copyright © 2021 Liuzh
+footer: Apache License 2.0 | Copyright © 2021 Liuzh
 features:
   - title: 开箱即用
     details: 无需任何配置，继承基类 Mapper 即可获得大量通用方法。
