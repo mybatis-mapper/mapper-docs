@@ -1,17 +1,40 @@
 module.exports = {
     lang: 'zh-CN',
-    title: 'mybaits-mapper',
-    description: 'MyBatis Mapper',
+    title: 'MyBatis Mapper',
+    description: '通用 Mapper',
     themeConfig: {
         logo: 'logo.png',
         navbar: [
             {
-                text: '入门',
-                link: 'docs/1.getting-started'
+                text: '快速上手',
+                link: '/docs/1.getting-started.html'
             },
             {
-                text: 'Mapper',
-                link: 'docs/2.mybatis-mapper'
+                text: 'GitHub',
+                link: 'https://github.com/mybatis-mapper/mapper'
+            },
+            {
+                text: 'Gitee',
+                link: 'https://gitee.com/mybatis-mapper/mapper'
+            },
+            {
+                text: 'mybatis-provider',
+                link: 'https://github.com/mybatis-mapper/provider'
+            }
+        ],
+        sidebar: [
+            {
+                text: '使用指南',
+                children: [
+                    '/docs/1.getting-started.md',
+                    '/docs/2.mybatis-mapper.md',
+                    '/docs/3.entity.md',
+                    '/docs/4.common.md',
+                    '/docs/5.service.md',
+                    '/docs/6.activerecord.md',
+                    '/docs/7.generator.md',
+                    '/docs/8.jpa.md'
+                ]
             }
         ]
     },
