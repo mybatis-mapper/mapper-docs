@@ -1,0 +1,16 @@
+{
+  "name": "mapper-docs",
+  "version": "1.0.0",
+  "description": "https://mapper.mybatis.io",
+  "main": "index.js",
+  "repository": "https://mapper.mybatis.io",
+  "author": "liuzh",
+  "license": "Apache-2.0",
+  "scripts": {
+    "docs:dev": "vuepress dev .",
+    "docs:build": "vuepress build ."
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.23"
+  }
+}
