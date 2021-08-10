@@ -2,6 +2,7 @@ module.exports = {
     lang: 'zh-CN',
     title: 'MyBatis Mapper',
     description: '通用 Mapper',
+    head: [['link', { rel: 'icon', href: '/favicon.png' }]],
     themeConfig: {
         logo: 'logo.png',
         navbar: [
