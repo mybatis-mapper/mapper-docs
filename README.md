@@ -23,7 +23,3 @@ actions:
   link: /docs/1.getting-started.html
   type: primary
 ---
-
-<div style="text-align: center;margin: 0 auto; padding-bottom: 30px;">
-<a target="_blank" href="https://maven-badges.herokuapp.com/maven-central/io.mybatis/mybatis-mapper"><img src="https://maven-badges.herokuapp.com/maven-central/io.mybatis/mybatis-mapper/badge.svg"/></a>
-</div>
