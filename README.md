@@ -4,6 +4,8 @@ heroImage: logo.png
 heroText: MyBatis Mapper
 tagline: 全新一代 MyBatis Mapper，简单易用，无需配置
 footer: Apache License 2.0 | Copyright © 2021 Liuzh
+actionText: 快速上手 →
+actionLink: /docs/1.getting-started.html
 features:
   - title: 开箱即用
     details: 无需任何配置，继承基类 Mapper 即可获得大量通用方法。
@@ -17,9 +19,4 @@ features:
     details: 简单几行代码即可实现自定义通用方法。
   - title: 轻松扩展
     details: 通过 Java SPI 轻松扩展。
-
-actions:
-- text: 快速上手
-  link: /docs/1.getting-started.html
-  type: primary
 ---
