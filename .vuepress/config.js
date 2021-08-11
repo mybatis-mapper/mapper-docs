@@ -33,6 +33,10 @@ module.exports = {
                     {text: 'GitHub', link: 'https://github.com/mybatis-mapper/provider'},
                     {text: 'Gitee', link: 'https://gitee.com/mybatis-mapper/provider'}
                 ]
+            },
+            {
+                text: '作者博客',
+                link: 'https://liuzh.blog.csdn.net/'
             }
         ],
         sidebar: [

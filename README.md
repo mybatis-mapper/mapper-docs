@@ -20,3 +20,11 @@ features:
   - title: 轻松扩展
     details: 通过 Java SPI 轻松扩展。
 ---
+<hr/>
+<div style="text-align: center;margin: 0 auto;">
+    <h3>关注微信公众号，及时获取最新信息</h3>
+    <img src="wexin.jpg"/>
+</div>
+
+
+
