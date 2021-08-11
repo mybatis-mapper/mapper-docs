@@ -6,8 +6,6 @@ module.exports = {
     plugins: [['vuepress-plugin-code-copy', true]],
     themeConfig: {
         logo: 'logo.png',
-        repo: 'mybatis-mapper/mapper',
-        repoLabel: '查看源码',
         docsRepo: 'mybatis-mapper/mapper-docs',
         docsBranch: 'master',
         editLinks: true,
