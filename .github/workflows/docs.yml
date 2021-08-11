@@ -35,9 +35,11 @@ jobs:
             ${{ runner.os }}-yarn-
 
       # 如果缓存没有命中，安装依赖
+      #- name: Install dependencies
+      #  if: steps.yarn-cache.outputs.cache-hit != 'true'
+      #  run: yarn --frozen-lockfile
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn --frozen-lockfile
+        run: yarn install
 
       # 运行构建脚本
       - name: Build VuePress site
