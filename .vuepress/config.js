@@ -5,7 +5,7 @@ module.exports = {
     head: [['link', {rel: 'icon', href: '/favicon.png'}]],
     plugins: [['vuepress-plugin-code-copy', true]],
     themeConfig: {
-        logo: 'logo.png',
+        logo: '/logo.png',
         docsRepo: 'mybatis-mapper/mapper-docs',
         docsBranch: 'master',
         editLinks: true,
