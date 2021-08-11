@@ -18,6 +18,10 @@ module.exports = {
                 link: '/docs/1.getting-started.html'
             },
             {
+                text: '1.0.0',
+                link: '/releases/1.0.0.html'
+            },
+            {
                 text: 'GitHub',
                 link: 'https://github.com/mybatis-mapper/mapper'
             },
@@ -26,7 +30,7 @@ module.exports = {
                 link: 'https://gitee.com/mybatis-mapper/mapper'
             },
             {
-                text: 'mybatis-provider',
+                text: 'Provider',
                 items: [
                     {text: 'GitHub', link: 'https://github.com/mybatis-mapper/provider'},
                     {text: 'Gitee', link: 'https://gitee.com/mybatis-mapper/provider'}
@@ -37,21 +41,26 @@ module.exports = {
                 link: 'https://liuzh.blog.csdn.net/'
             }
         ],
-        sidebar: [
-            {
-                title: '使用指南',
-                sidebarDepth: 2,
-                children: [
-                    '/docs/1.getting-started.md',
-                    '/docs/2.mybatis-mapper.md',
-                    '/docs/3.entity.md',
-                    '/docs/4.common.md',
-                    '/docs/5.service.md',
-                    '/docs/6.activerecord.md',
-                    '/docs/7.generator.md',
-                    '/docs/8.jpa.md'
-                ]
-            }
-        ]
+        sidebar: {
+            '/docs/': [
+                {
+                    title: '使用指南',
+                    sidebarDepth: 2,
+                    children: [
+                        '1.getting-started.md',
+                        '2.mybatis-mapper.md',
+                        '3.entity.md',
+                        '4.common.md',
+                        '5.service.md',
+                        '6.activerecord.md',
+                        '7.generator.md',
+                        '8.jpa.md'
+                    ]
+                }
+            ],
+            '/releases/': [
+                '1.0.0.md',
+            ]
+        }
     },
 }
