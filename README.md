@@ -26,5 +26,14 @@ features:
     <img src="wexin.jpg"/>
 </div>
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a05b63ee263e1ad37bf6c8966bfe92fa";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
 
