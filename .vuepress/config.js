@@ -2,7 +2,18 @@ module.exports = {
     lang: 'zh-CN',
     title: 'MyBatis Mapper',
     description: '通用 Mapper',
-    head: [['link', {rel: 'icon', href: '/favicon.png'}]],
+    head: [
+        ['link', {rel: 'icon', href: '/favicon.png'}],
+        ['script', {}, `
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?a05b63ee263e1ad37bf6c8966bfe92fa";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        `]
+    ],
     plugins: [['vuepress-plugin-code-copy', true]],
     themeConfig: {
         logo: '/logo.png',
