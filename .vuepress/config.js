@@ -29,8 +29,11 @@ module.exports = {
                 link: '/docs/1.getting-started.html'
             },
             {
-                text: '1.0.0',
-                link: '/releases/1.0.0.html'
+                text: '1.x',
+                items: [
+                    {text: '1.0.0', link: '/releases/1.0.0.html'},
+                    {text: '1.0.1', link: '/releases/1.0.1.html'},
+                ]
             },
             {
                 text: 'GitHub',
@@ -71,6 +74,7 @@ module.exports = {
             ],
             '/releases/': [
                 '1.0.0.md',
+                '1.0.1.md',
             ]
         }
     },
