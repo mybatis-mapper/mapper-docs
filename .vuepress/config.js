@@ -33,6 +33,7 @@ module.exports = {
                 items: [
                     {text: '1.0.0', link: '/releases/1.0.0.html'},
                     {text: '1.0.1', link: '/releases/1.0.1.html'},
+                    {text: '1.0.2', link: '/releases/1.0.2.html'},
                 ]
             },
             {
@@ -75,6 +76,7 @@ module.exports = {
             '/releases/': [
                 '1.0.0.md',
                 '1.0.1.md',
+                '1.0.2.md',
             ]
         }
     },
