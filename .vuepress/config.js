@@ -34,6 +34,8 @@ module.exports = {
                     {text: '1.0.0', link: '/releases/1.0.0.html'},
                     {text: '1.0.1', link: '/releases/1.0.1.html'},
                     {text: '1.0.3', link: '/releases/1.0.3.html'},
+                    {text: '1.0.4', link: '/releases/1.0.4.html'},
+                    {text: '1.1.0', link: '/releases/1.1.0.html'},
                 ]
             },
             {
@@ -71,12 +73,20 @@ module.exports = {
                         '7.generator.md',
                         '8.jpa.md'
                     ]
+                }, {
+                    title: '示例',
+                    sidebarDepth: 2,
+                    children: [
+                        'examples/1.spring-boot.md',
+                    ]
                 }
             ],
             '/releases/': [
                 '1.0.0.md',
                 '1.0.1.md',
                 '1.0.3.md',
+                '1.0.4.md',
+                '1.1.0.md',
             ]
         }
     },
