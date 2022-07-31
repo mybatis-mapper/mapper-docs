@@ -38,6 +38,7 @@ module.exports = {
                     {text: '1.1.0', link: '/releases/1.1.0.html'},
                     {text: '1.2.0', link: '/releases/1.2.0.html'},
                     {text: '1.2.x', link: '/releases/1.2.x.html'},
+                    {text: '2.0.0', link: '/releases/2.0.0.html'},
                 ]
             },
             {
@@ -91,6 +92,7 @@ module.exports = {
                 '1.1.0.md',
                 '1.2.0.md',
                 '1.2.x.md',
+                '2.0.0.md',
             ]
         }
     },
