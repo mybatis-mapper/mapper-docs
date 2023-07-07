@@ -12,7 +12,12 @@ module.exports = {
               var s = document.getElementsByTagName("script")[0]; 
               s.parentNode.insertBefore(hm, s);
             })();
-        `]
+        `],
+        ['script', {
+            crossorigin: "anonymous",
+            async: true,
+            src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1797264872895352"
+        }]
     ],
     plugins: [['vuepress-plugin-code-copy', true]],
     themeConfig: {
