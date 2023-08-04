@@ -89,6 +89,13 @@ module.exports = {
                     children: [
                         'examples/1.spring-boot.md',
                     ]
+                }, {
+                    title: '深度指南',
+                    sidebarDepth: 2,
+                    children: [
+                        'extend/1.extend-guide.md',
+                        'extend/2.common-field-setter.md',
+                    ]
                 }
             ],
             '/releases/': [
