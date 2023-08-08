@@ -34,7 +34,11 @@ module.exports = {
                 link: '/docs/1.getting-started.html'
             },
             {
-                text: '1.x',
+                text: '深度指南',
+                link: '/docs/extend/1.extend-guide.html'
+            },
+            {
+                text: '发布版本',
                 items: [
                     {text: '1.0.0', link: '/releases/1.0.0.html'},
                     {text: '1.0.1', link: '/releases/1.0.1.html'},
@@ -95,6 +99,7 @@ module.exports = {
                     children: [
                         'extend/1.extend-guide.md',
                         'extend/2.common-field-setter.md',
+                        'extend/3.master-enum-typehandler.md',
                     ]
                 }
             ],
