@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1. Spring Boot 示例 | MyBatis Mapper</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/favicon.png">
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?a05b63ee263e1ad37bf6c8966bfe92fa";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    <script crossorigin="anonymous" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1797264872895352"></script>
+    <meta name="description" content="通用 Mapper">
+    
+    <link rel="preload" href="/assets/css/0.styles.4fd8ad1c.css" as="style"><link rel="preload" href="/assets/js/app.982d0a79.js" as="script"><link rel="preload" href="/assets/js/2.05c8fd45.js" as="script"><link rel="preload" href="/assets/js/18.b87cd0b0.js" as="script"><link rel="prefetch" href="/assets/js/10.a8bd79cb.js"><link rel="prefetch" href="/assets/js/11.65baf78c.js"><link rel="prefetch" href="/assets/js/12.6184a11a.js"><link rel="prefetch" href="/assets/js/13.ecad1206.js"><link rel="prefetch" href="/assets/js/14.2ca5bee8.js"><link rel="prefetch" href="/assets/js/15.5a69d0d8.js"><link rel="prefetch" href="/assets/js/16.3d121eed.js"><link rel="prefetch" href="/assets/js/17.bf197a83.js"><link rel="prefetch" href="/assets/js/19.3f4a2a15.js"><link rel="prefetch" href="/assets/js/20.8c81acb8.js"><link rel="prefetch" href="/assets/js/21.1ad225ee.js"><link rel="prefetch" href="/assets/js/22.c8c90166.js"><link rel="prefetch" href="/assets/js/23.28f79614.js"><link rel="prefetch" href="/assets/js/24.06c1ba33.js"><link rel="prefetch" href="/assets/js/25.20400a37.js"><link rel="prefetch" href="/assets/js/26.a91a516f.js"><link rel="prefetch" href="/assets/js/27.bea17ee7.js"><link rel="prefetch" href="/assets/js/28.0cca3d9f.js"><link rel="prefetch" href="/assets/js/29.94bd9c22.js"><link rel="prefetch" href="/assets/js/3.9185f555.js"><link rel="prefetch" href="/assets/js/30.92ee1734.js"><link rel="prefetch" href="/assets/js/4.90120916.js"><link rel="prefetch" href="/assets/js/5.2c2483a0.js"><link rel="prefetch" href="/assets/js/6.f336762c.js"><link rel="prefetch" href="/assets/js/7.b0ec8caa.js"><link rel="prefetch" href="/assets/js/8.e6ea42ae.js"><link rel="prefetch" href="/assets/js/9.db2267c3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4fd8ad1c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="MyBatis Mapper" class="logo"> <span class="site-name can-hide">MyBatis Mapper</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/1.getting-started.html" class="nav-link">
+  快速上手
+</a></div><div class="nav-item"><a href="/docs/extend/1.extend-guide.html" class="nav-link">
+  深度指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="发布版本" class="dropdown-title"><span class="title">发布版本</span> <span class="arrow down"></span></button> <button type="button" aria-label="发布版本" class="mobile-dropdown-title"><span class="title">发布版本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/releases/1.0.0.html" class="nav-link">
+  1.0.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.1.html" class="nav-link">
+  1.0.1
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.3.html" class="nav-link">
+  1.0.3
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.4.html" class="nav-link">
+  1.0.4
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.1.0.html" class="nav-link">
+  1.1.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.2.0.html" class="nav-link">
+  1.2.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.2.x.html" class="nav-link">
+  1.2.x
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.0.0.html" class="nav-link">
+  2.0.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.1.0.html" class="nav-link">
+  2.1.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.1.1.html" class="nav-link">
+  2.1.1
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/mybatis-mapper/mapper" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/mybatis-mapper/mapper" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Provider" class="dropdown-title"><span class="title">Provider</span> <span class="arrow down"></span></button> <button type="button" aria-label="Provider" class="mobile-dropdown-title"><span class="title">Provider</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mybatis-mapper/provider" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/mybatis-mapper/provider" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://liuzh.blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  作者博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/1.getting-started.html" class="nav-link">
+  快速上手
+</a></div><div class="nav-item"><a href="/docs/extend/1.extend-guide.html" class="nav-link">
+  深度指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="发布版本" class="dropdown-title"><span class="title">发布版本</span> <span class="arrow down"></span></button> <button type="button" aria-label="发布版本" class="mobile-dropdown-title"><span class="title">发布版本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/releases/1.0.0.html" class="nav-link">
+  1.0.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.1.html" class="nav-link">
+  1.0.1
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.3.html" class="nav-link">
+  1.0.3
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.4.html" class="nav-link">
+  1.0.4
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.1.0.html" class="nav-link">
+  1.1.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.2.0.html" class="nav-link">
+  1.2.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.2.x.html" class="nav-link">
+  1.2.x
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.0.0.html" class="nav-link">
+  2.0.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.1.0.html" class="nav-link">
+  2.1.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.1.1.html" class="nav-link">
+  2.1.1
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/mybatis-mapper/mapper" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/mybatis-mapper/mapper" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Provider" class="dropdown-title"><span class="title">Provider</span> <span class="arrow down"></span></button> <button type="button" aria-label="Provider" class="mobile-dropdown-title"><span class="title">Provider</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mybatis-mapper/provider" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/mybatis-mapper/provider" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://liuzh.blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  作者博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>使用指南</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>示例</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/examples/1.spring-boot.html" aria-current="page" class="active sidebar-link">1. Spring Boot 示例</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/examples/1.spring-boot.html#mybatis-mapper-spring-boot-示例" class="sidebar-link">mybatis-mapper spring-boot 示例</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/examples/1.spring-boot.html#项目地址" class="sidebar-link">项目地址</a></li><li class="sidebar-sub-header"><a href="/docs/examples/1.spring-boot.html#示例项目目前包含-3-个分支-分别为" class="sidebar-link">示例项目目前包含 3 个分支，分别为</a></li><li class="sidebar-sub-header"><a href="/docs/examples/1.spring-boot.html#详细介绍看每个分支的文档" class="sidebar-link">详细介绍看每个分支的文档</a></li></ul></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>深度指南</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="mybatis-mapper-spring-boot-示例"><a href="#mybatis-mapper-spring-boot-示例" class="header-anchor">#</a> mybatis-mapper spring-boot 示例</h2> <h3 id="项目地址"><a href="#项目地址" class="header-anchor">#</a> 项目地址</h3> <ul><li><a href="https://github.com/mybatis-mapper/mybatis-mapper-example-springboot" target="_blank" rel="noopener noreferrer">GitHub<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://gitee.com/mybatis-mapper/mybatis-mapper-example-springboot" target="_blank" rel="noopener noreferrer">Gitee<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <h3 id="示例项目目前包含-3-个分支-分别为"><a href="#示例项目目前包含-3-个分支-分别为" class="header-anchor">#</a> 示例项目目前包含 3 个分支，分别为</h3> <ul><li>master 简单集成</li> <li>baseid 简单封装，所有表都使用名为 id，类型为 bigint 的自增主键</li> <li>shardingsphere 分库分表，支持分库分表的代码生成，每个表有不同的id</li></ul> <h3 id="详细介绍看每个分支的文档"><a href="#详细介绍看每个分支的文档" class="header-anchor">#</a> 详细介绍看每个分支的文档</h3></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/mybatis-mapper/mapper-docs/edit/master/docs/examples/1.spring-boot.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">最后编辑时间:</span> <span class="time">1/3/2022, 11:12:28 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/8.jpa.html" class="prev">
+        8. JPA 注解支持
+      </a></span> <span class="next"><a href="/docs/extend/1.extend-guide.html">
+        1. mybatis-mapper扩展接口调用顺序
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.982d0a79.js" defer></script><script src="/assets/js/2.05c8fd45.js" defer></script><script src="/assets/js/18.b87cd0b0.js" defer></script>
+  </body>
+</html>

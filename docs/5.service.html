@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>5. service 模块 | MyBatis Mapper</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/favicon.png">
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?a05b63ee263e1ad37bf6c8966bfe92fa";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    <script crossorigin="anonymous" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1797264872895352"></script>
+    <meta name="description" content="通用 Mapper">
+    
+    <link rel="preload" href="/assets/css/0.styles.4fd8ad1c.css" as="style"><link rel="preload" href="/assets/js/app.982d0a79.js" as="script"><link rel="preload" href="/assets/js/2.05c8fd45.js" as="script"><link rel="preload" href="/assets/js/14.2ca5bee8.js" as="script"><link rel="prefetch" href="/assets/js/10.a8bd79cb.js"><link rel="prefetch" href="/assets/js/11.65baf78c.js"><link rel="prefetch" href="/assets/js/12.6184a11a.js"><link rel="prefetch" href="/assets/js/13.ecad1206.js"><link rel="prefetch" href="/assets/js/15.5a69d0d8.js"><link rel="prefetch" href="/assets/js/16.3d121eed.js"><link rel="prefetch" href="/assets/js/17.bf197a83.js"><link rel="prefetch" href="/assets/js/18.b87cd0b0.js"><link rel="prefetch" href="/assets/js/19.3f4a2a15.js"><link rel="prefetch" href="/assets/js/20.8c81acb8.js"><link rel="prefetch" href="/assets/js/21.1ad225ee.js"><link rel="prefetch" href="/assets/js/22.c8c90166.js"><link rel="prefetch" href="/assets/js/23.28f79614.js"><link rel="prefetch" href="/assets/js/24.06c1ba33.js"><link rel="prefetch" href="/assets/js/25.20400a37.js"><link rel="prefetch" href="/assets/js/26.a91a516f.js"><link rel="prefetch" href="/assets/js/27.bea17ee7.js"><link rel="prefetch" href="/assets/js/28.0cca3d9f.js"><link rel="prefetch" href="/assets/js/29.94bd9c22.js"><link rel="prefetch" href="/assets/js/3.9185f555.js"><link rel="prefetch" href="/assets/js/30.92ee1734.js"><link rel="prefetch" href="/assets/js/4.90120916.js"><link rel="prefetch" href="/assets/js/5.2c2483a0.js"><link rel="prefetch" href="/assets/js/6.f336762c.js"><link rel="prefetch" href="/assets/js/7.b0ec8caa.js"><link rel="prefetch" href="/assets/js/8.e6ea42ae.js"><link rel="prefetch" href="/assets/js/9.db2267c3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4fd8ad1c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="MyBatis Mapper" class="logo"> <span class="site-name can-hide">MyBatis Mapper</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/1.getting-started.html" class="nav-link">
+  快速上手
+</a></div><div class="nav-item"><a href="/docs/extend/1.extend-guide.html" class="nav-link">
+  深度指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="发布版本" class="dropdown-title"><span class="title">发布版本</span> <span class="arrow down"></span></button> <button type="button" aria-label="发布版本" class="mobile-dropdown-title"><span class="title">发布版本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/releases/1.0.0.html" class="nav-link">
+  1.0.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.1.html" class="nav-link">
+  1.0.1
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.3.html" class="nav-link">
+  1.0.3
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.4.html" class="nav-link">
+  1.0.4
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.1.0.html" class="nav-link">
+  1.1.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.2.0.html" class="nav-link">
+  1.2.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.2.x.html" class="nav-link">
+  1.2.x
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.0.0.html" class="nav-link">
+  2.0.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.1.0.html" class="nav-link">
+  2.1.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.1.1.html" class="nav-link">
+  2.1.1
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/mybatis-mapper/mapper" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/mybatis-mapper/mapper" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Provider" class="dropdown-title"><span class="title">Provider</span> <span class="arrow down"></span></button> <button type="button" aria-label="Provider" class="mobile-dropdown-title"><span class="title">Provider</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mybatis-mapper/provider" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/mybatis-mapper/provider" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://liuzh.blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  作者博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/1.getting-started.html" class="nav-link">
+  快速上手
+</a></div><div class="nav-item"><a href="/docs/extend/1.extend-guide.html" class="nav-link">
+  深度指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="发布版本" class="dropdown-title"><span class="title">发布版本</span> <span class="arrow down"></span></button> <button type="button" aria-label="发布版本" class="mobile-dropdown-title"><span class="title">发布版本</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/releases/1.0.0.html" class="nav-link">
+  1.0.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.1.html" class="nav-link">
+  1.0.1
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.3.html" class="nav-link">
+  1.0.3
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.0.4.html" class="nav-link">
+  1.0.4
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.1.0.html" class="nav-link">
+  1.1.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.2.0.html" class="nav-link">
+  1.2.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/1.2.x.html" class="nav-link">
+  1.2.x
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.0.0.html" class="nav-link">
+  2.0.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.1.0.html" class="nav-link">
+  2.1.0
+</a></li><li class="dropdown-item"><!----> <a href="/releases/2.1.1.html" class="nav-link">
+  2.1.1
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/mybatis-mapper/mapper" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://gitee.com/mybatis-mapper/mapper" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Provider" class="dropdown-title"><span class="title">Provider</span> <span class="arrow down"></span></button> <button type="button" aria-label="Provider" class="mobile-dropdown-title"><span class="title">Provider</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mybatis-mapper/provider" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/mybatis-mapper/provider" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><a href="https://liuzh.blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  作者博客
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>使用指南</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/1.getting-started.html" class="sidebar-link">1.快速上手</a></li><li><a href="/docs/2.mybatis-mapper.html" class="sidebar-link">2. Mapper 接口</a></li><li><a href="/docs/3.entity.html" class="sidebar-link">3. 实体类注解</a></li><li><a href="/docs/4.common.html" class="sidebar-link">4. common 模块</a></li><li><a href="/docs/5.service.html" aria-current="page" class="active sidebar-link">5. service 模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/5.service.html#_5-1-entityservice" class="sidebar-link">5.1 EntityService</a></li><li class="sidebar-sub-header"><a href="/docs/5.service.html#_5-2-exampleservice" class="sidebar-link">5.2 ExampleService</a></li><li class="sidebar-sub-header"><a href="/docs/5.service.html#_5-3-baseservice" class="sidebar-link">5.3 BaseService</a></li><li class="sidebar-sub-header"><a href="/docs/5.service.html#_5-4-abstractservice" class="sidebar-link">5.4 AbstractService</a></li></ul></li><li><a href="/docs/6.activerecord.html" class="sidebar-link">6. activerecord 模块</a></li><li><a href="/docs/7.generator.html" class="sidebar-link">7. 睿Rui - 代码生成器</a></li><li><a href="/docs/8.jpa.html" class="sidebar-link">8. JPA 注解支持</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>示例</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>深度指南</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>service 模块对应开发中的 service 层，或者说是 Spring 中的 <code>@Service</code> 标记的类。</p> <p>这一层基于 mapper 模块中的 <code>Mapper</code> 接口，封装了大量开箱即用的 service 层方法。</p> <p>在设计 service 接口时，考虑了微服务或 RPC 场景下的使用，因此像 <code>save</code> 方法就进行了特殊的定义：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 保存（所有字段）
+ *
+ * @param entity 实体类
+ * @return 返回保存成功后的实体，远程服务调用时，由于序列化和反序列化，入参和返回值不是同一个对象
+ */</span>
+<span class="token class-name">T</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token class-name">T</span> entity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>方法注释中也有说明，最常见的场景中，调用 <code>save</code> 方法时传递的 <code>entity</code> 参数是个引用对象，
+<code>save</code> 实现中对 <code>entity</code> 的修改都会直接影响到调用的传入的引用对象，这种情况下的方法返回值可以直接是 <code>void</code>.</p> <p>但是微服务中跨服务调用时，入参不是引用传递，而是通过序列化传递，服务端对参数的处理不会影响调用端，
+调用端想要得到修改后的对象，必须让服务端返回才行，服务端返回时也是先序列化，客户端反序列化，
+此时返回的结果和参数不是同一个对象，为了让接口方法更通用，就需要 <code>save</code> 方法返回修改后的实体。</p> <p>另外对于 service 方法操作数据库方法时，错误由 service 层直接判断，比如保存失败时，不是返回0，
+而是直接抛出异常：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token class-name">T</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token class-name">T</span> entity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Assert</span><span class="token punctuation">.</span><span class="token function">isTrue</span><span class="token punctuation">(</span>baseMapper<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>entity<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token constant">SAVE_FAILURE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> entity<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在上面代码中，通过断言（来自 common 包）判断 insert 是否成功，如果失败则抛出保存失败的异常：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 断言是否为真
+ *
+ * @param expression 布尔值
+ * @param code       错误码
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">isTrue</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> expression<span class="token punctuation">,</span> <span class="token class-name">Code</span> code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>expression<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">AssertException</span><span class="token punctuation">(</span>code<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>SAVE_FAILURE</code>的定义：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">Code</span> <span class="token constant">SAVE_FAILURE</span>   <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Code</span><span class="token punctuation">(</span><span class="token string">&quot;501&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;保存失败&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>下面详细介绍所有接口类的作用和方法的说明。</p> <h2 id="_5-1-entityservice"><a href="#_5-1-entityservice" class="header-anchor">#</a> 5.1 <code>EntityService</code></h2> <p>源码中的注释更详细，这里简单把接口列举一下：</p> <ul><li><code>T save(T entity);</code>: 保存（所有字段）</li> <li><code>T saveSelective(T entity);</code>: 保存（非空字段，空的字段会使用数据库设置的默认值，但是不会字段反写）</li> <li><code>T update(T entity);</code>: 更新（所有字段）</li> <li><code>T updateSelective(T entity);</code>: 更新（非空字段）</li> <li><code>T updateSelective(T entity, Fn&lt;T, Object&gt;... forceUpdateFields);</code>: 更新（非空字段），指定的强制更新字段不区分是否为空</li> <li><code>boolean pkHasValue(T entity);</code>: 主键是否有值，<strong>用于判断对象更新或保存，建议重写为更高效的实现</strong></li> <li><code>T saveOrUpdate(T entity);</code>: 保存或更新（全部字段），当主键不存在时保存，存在时更新</li> <li><code>T saveOrUpdateSelective(T entity);</code>: 保存或更新（非空字段），当主键不存在时保存，存在时更新</li> <li><code>int delete(T entity);</code>: 根据当前类的值作为条件进行删除（注意：当所有字段都没有值时可能会清库）</li> <li><code>int deleteById(I id);</code>: 根据主键进行删除</li> <li><code>&lt;F&gt; int deleteByFieldList(Fn&lt;T, F&gt; field, List&lt;F&gt; fieldValueList);</code>: 根据指定字段集合删除</li> <li><code>T findById(I id);</code>: 根据指定的主键查询</li> <li><code>T findOne(T entity);</code>: 以当前类作为条件查询一个，当结果多于1个时出错</li> <li><code>List&lt;T&gt; findList(T entity);</code>: 以当前类作为条件查询</li> <li><code>&lt;F&gt; List&lt;T&gt; findByFieldList(Fn&lt;T, F&gt; field, List&lt;F&gt; fieldValueList);</code>: 根据指定字段集合查询</li> <li><code>List&lt;T&gt; findAll();</code>: 查询全部</li> <li><code>long count(T entity);</code>: 以当前类作为条件查询总数</li></ul> <p>service 层的方法对 Mapper 方法又进行了一层简单包装，像 <code>T updateSelective(T entity, Fn&lt;T, Object&gt;... forceUpdateFields);</code>，
+这个方法比 Mapper 中下面的方法更容易理解：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">int</span> <span class="token function">updateByPrimaryKeySelectiveWithForceFields</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Param</span><span class="token punctuation">(</span><span class="token string">&quot;entity&quot;</span><span class="token punctuation">)</span> <span class="token class-name">T</span> entity<span class="token punctuation">,</span> <span class="token annotation punctuation">@Param</span><span class="token punctuation">(</span><span class="token string">&quot;fns&quot;</span><span class="token punctuation">)</span> <span class="token class-name">Fn<span class="token punctuation">.</span>Fns</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">&gt;</span></span> forceUpdateFields<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>还有一个特殊的 <code>boolean pkHasValue(T entity);</code> 方法，<strong>这个方法用于判断对象更新或保存（saveOrUpdate），建议重写为更高效的实现</strong>，例如重新为：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">pkHasValue</span><span class="token punctuation">(</span><span class="token class-name">User</span> entity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> user<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这里写成了固定的 <code>User</code>，如果有一个统一的基类，用基类封装更高。</p> <h2 id="_5-2-exampleservice"><a href="#_5-2-exampleservice" class="header-anchor">#</a> 5.2 <code>ExampleService</code></h2> <p>源码中的注释更详细，这里简单把接口列举一下：</p> <ul><li><code>default Example&lt;T&gt; example()</code>：获取 Example 对象</li> <li><code>int delete(Example&lt;T&gt; example);</code>：根据 example 条件批量删除</li> <li><code>int update(T entity, Example&lt;T&gt; example);</code>：根据 example 查询条件批量更新（所有字段）</li> <li><code>int updateSelective(T entity, Example&lt;T&gt; example);</code>：根据 example 查询条件批量更新（非空字段）</li> <li><code>T findOne(Example&lt;T&gt; example);</code>：根据 example 条件查询一个，当结果多于1个时出错</li> <li><code>List&lt;T&gt; findList(Example&lt;T&gt; example);</code>：根据 example 条件查询</li> <li><code>long count(Example&lt;T&gt; example);</code>：根据 example 查询总数</li></ul> <p>特殊的只有一个方法，这个方法就是为了更方便的得到一个 <code>Example&lt;T&gt;</code> 的实例，除此之外，你也可以自己 <code>new</code>，例如：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token class-name">Example</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">User</span><span class="token punctuation">&gt;</span></span> example <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Example</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="_5-3-baseservice"><a href="#_5-3-baseservice" class="header-anchor">#</a> 5.3 <code>BaseService</code></h2> <p><code>BaseService</code> 中没有增加任何直接的方法，直接继承了上面两个接口：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 基础接口，包含实体类基本接口和 Example 接口
+ * &lt;p&gt;
+ * 自己的接口不一定要实现这个接口，直接继承会暴露过多的接口，
+ * 可以直接在实现类中继承 AbstractService 实现，对外暴露的接口在自己接口中定义，
+ * 自己定义的接口和 AbstractService 实现方法的定义一样时，不需要提供实现方法
+ *
+ * @param &lt;T&gt; 实体类类型
+ * @param &lt;I&gt; 主键类型
+ * @author liuzh
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">BaseService</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token class-name">I</span> <span class="token keyword">extends</span> <span class="token class-name">Serializable</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">extends</span> <span class="token class-name">EntityService</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token class-name">I</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">ExampleService</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">T</span><span class="token punctuation">,</span> <span class="token class-name">I</span><span class="token punctuation">&gt;</span></span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>这里讨论一个设计上的决策。</p> <p>当你只需要用到 <code>EntityService</code> 中的方法时你可以只继承 <code>EntityService</code>，同理 <code>ExampleService</code>，
+当你两者都需要时，直接 <code>BaseService</code>。如果你只有单体应用的开发经验，在自己接口直接继承这些接口时，没有什么不妥的地方。
+当你有过微服务开发经验时，你应该发现不妥，微服务中的接口都是对外暴露的服务，如果不加思考的继承了这些 service 接口，
+你在无意中就对外暴露了大量的接口方法，这些方法的粒度太细，封装程度太低，极易出现各种方法的随便调用，极易产生分布式事务。</p> <p>所以，在自己接口选择继承通用接口时，先看看自己是否需要暴露这么多的方法。</p> <p>虽然这里提供了 3 个接口，但不是不假思索就使用的，如果不继承这些接口，这些接口还有什么用呢？</p> <p>继续看下面的抽象类。</p> <h2 id="_5-4-abstractservice"><a href="#_5-4-abstractservice" class="header-anchor">#</a> 5.4 <code>AbstractService</code></h2> <p><code>AbstractService</code> 抽象类继承了 <code>BaseService</code>，实现了所有的接口方法，这个类是推荐拿来直接去用的，
+你可以让自己的实现类继承这个抽象类和自己的接口，当想对外暴露 <code>BaseService</code> 现成方法时，只需要在自己接口中，
+按照相同的参数、返回值、方法名定义一个相同的方法即可，在实现类继承 <code>AbstractService</code> 的情况下，
+如果不需要重新该接口方法，你的实现类中就不需要写任何代码。例如下面的用法：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">RoleService</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">/**
+   * 保存（所有字段）
+   *
+   * @param entity 实体类
+   * @return 返回保存成功后的实体，远程服务调用时，由于序列化和反序列化，入参和返回值不是同一个对象
+   */</span>
+  <span class="token class-name">Role</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token class-name">Role</span> entity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/**
+   * 更新（所有字段）
+   *
+   * @param entity 实体类
+   * @return 返回更新成功后的实体，远程服务调用时，由于序列化和反序列化，入参和返回值不是同一个对象
+   */</span>
+  <span class="token class-name">Role</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token class-name">Role</span> entity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/**
+   * 更新（非空字段），指定的强制更新字段不区分是否为空
+   *
+   * @param entity            实体类
+   * @param forceUpdateFields 强制更新的字段，不区分字段是否为 null
+   * @return 返回更新成功后的实体，远程服务调用时，由于序列化和反序列化，入参和返回值不是同一个对象
+   */</span>
+  <span class="token class-name">Role</span> <span class="token function">updateSelective</span><span class="token punctuation">(</span><span class="token class-name">Role</span> entity<span class="token punctuation">,</span> <span class="token class-name">Fn</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Role</span><span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> forceUpdateFields<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/**
+   * 根据主键进行删除
+   *
+   * @param id 指定的主键
+   * @return 返回 1成功，0失败抛出异常
+   */</span>
+  <span class="token keyword">int</span> <span class="token function">deleteById</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/**
+   * 根据指定字段集合删除
+   *
+   * @param field          字段
+   * @param fieldValueList 字段值集合
+   * @param &lt;F&gt;            字段值类型
+   * @return 删除数据的条数
+   */</span>
+  <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">F</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">int</span> <span class="token function">deleteByFieldList</span><span class="token punctuation">(</span><span class="token class-name">Fn</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Role</span><span class="token punctuation">,</span> <span class="token class-name">F</span><span class="token punctuation">&gt;</span></span> field<span class="token punctuation">,</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">F</span><span class="token punctuation">&gt;</span></span> fieldValueList<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">/**
+   * 根据指定的主键查询
+   *
+   * @param id 主键
+   * @return 实体
+   */</span>
+  <span class="token class-name">Role</span> <span class="token function">findById</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面定义了一个角色的接口，没有继承前面的 3 个接口，只提供了基本的增删改查方法。下面是对应的实现类：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Service</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RoleServiceImpl</span> <span class="token keyword">extends</span> <span class="token class-name">AbstractService</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Role</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">RoleMapper</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">implements</span> <span class="token class-name">RoleService</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>实现类中没有任何代码，除非你需要修改已有方法的逻辑，否则就不需要任何代码。</p> <p>以上面例子来简单说明方法定义的规则，在 <code>AbstractService</code> 中定义的保存方法如下：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Override</span>
+<span class="token keyword">public</span> <span class="token class-name">T</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token class-name">T</span> entity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Assert</span><span class="token punctuation">.</span><span class="token function">isTrue</span><span class="token punctuation">(</span>baseMapper<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>entity<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token constant">SAVE_FAILURE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> entity<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>在 <code>RoleService</code> 中对应的方法定义如下：</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 保存（所有字段）
+ *
+ * @param entity 实体类
+ * @return 返回保存成功后的实体，远程服务调用时，由于序列化和反序列化，入参和返回值不是同一个对象
+ */</span>
+<span class="token class-name">Role</span> <span class="token function">save</span><span class="token punctuation">(</span><span class="token class-name">Role</span> entity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>因为在继承 <code>AbstractService&lt;Role, Integer, RoleMapper&gt;</code> 时指定了泛型的类型，因此这里的定义在抽象类中是存在对应实现的，
+因此就不需要自己实现。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/mybatis-mapper/mapper-docs/edit/master/docs/5.service.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">最后编辑时间:</span> <span class="time">8/11/2021, 2:57:21 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/4.common.html" class="prev">
+        4. common 模块
+      </a></span> <span class="next"><a href="/docs/6.activerecord.html">
+        6. activerecord 模块
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.982d0a79.js" defer></script><script src="/assets/js/2.05c8fd45.js" defer></script><script src="/assets/js/14.2ca5bee8.js" defer></script>
+  </body>
+</html>
